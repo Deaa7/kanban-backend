@@ -81,7 +81,7 @@ def increaseNumberOfTaskSubtasks(request , task_id) :
 @api_view(['POST'])
 def decreaseNumberOfTaskSubtasks(request , task_id) :
     task = get_object_or_404(Task , id = task_id )
-    task.number_of_subtasks += 1
+    task.number_of_subtasks -= 1
     task.save()
     return Response("decrease done successfully" , status = status.HTTP_200_OK)
 
@@ -95,6 +95,6 @@ def increaseNumberOfTaskCompletedSubtasks(request , task_id) :
 @api_view(['POST'])
 def decreaseNumberOfTaskCompletedSubtasks(request , task_id) :
     task = get_object_or_404(Task , id = task_id )
-    task.number_of_completed_subtasks += 1
+    task.number_of_completed_subtasks -= 1
     task.save()
     return Response("decrease done successfully" , status = status.HTTP_200_OK)

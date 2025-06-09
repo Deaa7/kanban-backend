@@ -25,11 +25,21 @@ class GetTask(APIView):
             
     
 # API endpoint to retrieve tasks using board id 
+class GetTasksByBoardId(APIView):
+
+    def get(self, request, board_id):
+
+            tasks = Task.objects.filter( board_id = board_id)
+            serializer = TaskSerializer(tasks , many=True)
+            
+            return Response(serializer.data , status=status.HTTP_200_OK)
+            
+# API endpoint to retrieve tasks using column id   
 class GetTasksByColumnId(APIView):
 
     def get(self, request, column_id):
 
-            tasks = Task.objects.filter( status = column_id)
+            tasks = Task.objects.filter( column_id = column_id)
             serializer = TaskSerializer(tasks , many=True)
             
             return Response(serializer.data , status=status.HTTP_200_OK)

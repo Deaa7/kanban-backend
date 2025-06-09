@@ -8,6 +8,8 @@ urlpatterns = [
     
     path('get-all-tasks-by-column-id/<int:column_id>/', views.GetTasksByColumnId.as_view() ,name="get-all-tasks-by-column-id"), # get all tasks by column id
     
+    path('get-all-tasks-by-board-id/<int:board_id>/', views.GetTasksByBoardId.as_view() ,name="get-all-tasks-by-board-id"), # get all tasks by board id
+    
     path('get-task/<int:id>/', views.GetTask.as_view() ,name="get-task"), # gets single task using id 
  
     path('delete-task/<int:id>/', views.DeleteTask.as_view() , name="delete-task"), # deletes task using id 

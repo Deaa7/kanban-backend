@@ -4,7 +4,7 @@ from .models import Task
  
  
 class TaskAdmin(admin.ModelAdmin): 
-    list_display = ['name' , 'status' , 'id' , 'number_of_subtasks','number_of_completed_subtasks']
-    search_fields = ['name' ,'status']
+    list_display = ['name'   , 'id' , 'number_of_subtasks','number_of_completed_subtasks']
+    search_fields = ['name' ]
 
 admin.site.register(Task ,TaskAdmin)

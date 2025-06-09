@@ -20,6 +20,6 @@ urlpatterns = [
 
     path('increase-number-of-task-completed-subtasks/<int:task_id>/', views.increaseNumberOfTaskCompletedSubtasks ,name="increase-number-of-task-completed-subtasks"), # increase number of task completed subtasks
 
-    path('decrease-number-of-task-completed-subtasks/<int:task_id>/', views.decreaseNumberOfTaskCompletedSubtasks ,name="decrease-number-of-task-completed-subtasks/<int:task_id>/"), #  decrease number of task completed subtasks
+    path('decrease-number-of-task-completed-subtasks/<int:task_id>/', views.decreaseNumberOfTaskCompletedSubtasks ,name="decrease-number-of-task-completed-subtasks"), #  decrease number of task completed subtasks
 
 ]
